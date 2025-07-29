@@ -4918,27 +4918,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 </style>
 
-<div id="toast">🚫 Developer Tools is not allowed!</div>
 
-<script>
-  function showToast(message) {
-    const toast = document.getElementById("toast");
-    toast.textContent = message;
-    toast.style.display = "block";  
-    setTimeout(() => {
-      toast.style.display = "none";
-    }, 4000);
-  }
-
- setInterval(function() {
-  const devtools = window.outerWidth - window.innerWidth > 160 ||
-                   window.outerHeight - window.innerHeight > 160;
-  if (devtools) {
-    showToast("🚫 Developer Tools is not allowed!");
-  }
-    window.close(); 
-}, 4000);
-</script>
 
   </body>
 </html>
